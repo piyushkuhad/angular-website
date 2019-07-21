@@ -1,0 +1,52 @@
+.custom-menu-primary {
+    float: left;
+    width: 50%;
+}
+
+.custom-menu-primary nav {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-menu-primary ul {
+    margin: 5px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.custom-menu-primary ul li {
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+    font-size: 18px;
+    float: left;
+}
+
+.custom-menu-primary ul li a {
+    text-decoration: none;
+    -webkit-transition: .3s all;
+    transition: .3s all;
+    text-transform: uppercase;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: .2em;
+    position: relative;
+}
+
+.custom-menu-primary ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    display: block;
+    background-color: transparent;
+    transition: all 300ms ease;
+}
+
+.custom-menu-primary ul li a:hover:after {
+    width: 100%;
+    background-color: #fff;
+}

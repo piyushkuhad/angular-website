@@ -1,0 +1,86 @@
+<section class="bg-section" id="contact-section">
+    <div class="page-center">
+      <h1 class="animated fadeInLeft"><span>Contact</span> Us</h1>
+      <div class="cm-form-group clearfix">
+        <div class="cm-form-control animated fadeInLeft">
+          <form (ngSubmit)="onSubmit(feed)" #feed="ngForm">
+          <!-- <input type="text" ngModel name="fullName" id="fullName" ng-pattern="/^[a-zA-Z]*$/" placeholder="Name" #fullName="ngModel">
+          <span *ngIf="fullName.invalid" class="text-danger">Text Field not blank</span> -->
+          <input type="text" placeholder="Name" id="name" name="name" class="form-control"
+          required minlength="4" [(ngModel)]="hero.name" #name="ngModel" pattern="^[a-z0-9_-]{8,15}$">
+          <!--Full Name Error-->  
+          <div *ngIf="name.invalid && (name.dirty || name.touched)"
+              class="alert alert-danger">
+
+            <div *ngIf="name.errors.required">
+              Name is required.
+            </div>
+            <div *ngIf="name.errors.minlength">
+              Name must be at least 4 characters long.
+            </div>
+            <div *ngIf="name.errors.pattern">
+              Not supported pattern
+            </div>
+
+          </div>
+
+          <input type="email" required ngModel name="email" id="email" placeholder="Email" #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+            <div *ngIf="email.errors.required">
+              Email is Required.
+            </div>
+            <div *ngIf="email.errors.pattern">
+              Incorrect Email Pattern
+            </div>
+            <div *ngIf="email.errors.email">
+              Form isn't going to submit unless this field is filled
+            </div>
+          </div>
+          <input type="tel" minlength="10" ngModel name="telephone" id="telephone" placeholder="Phone Number" 
+           #telephone="ngModel" pattern="^((\\+91-?)|0)?[0-9]{10}$" required>
+          <div *ngIf="telephone.invalid && (telephone.dirty || telephone.touched)" class="alert alert-danger">
+            <div *ngIf="telephone.errors.required">
+              Telephone Field is Required
+            </div>
+            <div *ngIf="telephone.errors.pattern">
+              Not supported pattern for Telephone/Mobile
+            </div>
+            <div *ngIf="telephone.errors.minlength">
+              Minimum Length for Telephone/Mobile is 10
+            </div>
+          </div>
+          <input type="text" ngModel name="city" id="city" placeholder="City" #city="ngModel" required>
+          <div *ngIf="city.touched || city.dirty" class="alert alert-danger">
+            <div *ngIf="city.errors.required">
+              This field is Required
+            </div>
+          </div>
+          <textarea ngModel name="message" id="message" placeholder="Any Message(optional)" #message="ngModel"></textarea>
+          <button class="send-button" id="submit">
+              <div class="button">
+                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+              </div>
+            </button>
+          </form>
+        </div>
+        <div class="cm-info animated fadeIn">
+          <h3>Get In Touch</h3>
+          <ul class="cm-contact-info">
+            <li><i class="fa fa-location-arrow"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
+            <li><i class="fa fa-envelope"></i><span>info@domain.com</span></li>
+            <li><i class="fa fa-phone"></i><span>+123 456 7890</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="form-filled-modal">
+        <h1>Please Check Information:</h1>
+        <p id="formName"></p>
+        <p id="formEmail"></p>
+        <p id="formTel"></p>
+        <p id="formCity"></p>
+        <p id="formMessage"></p>
+      </div>
+
+    </div>
+  </section>

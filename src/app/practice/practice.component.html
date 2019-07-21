@@ -1,0 +1,13 @@
+<div class="cm-practice">
+  <div class="container">
+    <div class="row">
+      <h1>Form Validation</h1>
+      <form #feed2="ngForm">
+        <input class="form-control" type="text" id="fName" ngModel name="fName" #fullName="ngModel" pattern="^[a-z0-9_-]{8,15}$">
+        <div *ngIf="fName.invalid && fName.touched">
+          <div *ngIf="fullName.error">Required Field</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

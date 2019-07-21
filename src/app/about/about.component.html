@@ -1,0 +1,19 @@
+<section class="bg-section">
+    <div class="bg animated fadeIn slower" [ngStyle]="{backgroundImage: 'url('+ aboutBg +')'}"></div>
+    <div class="content">
+      <h1 class="animated fadeInDown faster">About <span>Me</span></h1>
+      <p class="animated fadeInRight faster">
+          What I value most in my work is offering the entire package: meaningful and informed training, and knowledge of healthy nutrition. These two combined make us healthier and stronger not only physically in the training hall but also mentally in everyday life. I want to help you take care of your body, health and mind.
+      </p>
+    </div>
+</section>
+<div class="custom-menu-about">
+  <nav>
+      <ul class="cm-menu clearfix">
+      <li><a routerLink="/about/vision" routerLinkActive="active">Our Vision</a></li>
+      <li><a routerLink="/about/principle" routerLinkActive="active">Our Principles</a></li>
+      </ul>
+  </nav>
+</div>
+<router-outlet></router-outlet>
+<app-contact-modal></app-contact-modal>

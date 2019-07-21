@@ -1,0 +1,43 @@
+header {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+    z-index: 4;
+    position: absolute;
+    background: rgba(255,255,255,.15);
+    -webkit-transition: .8s all ease-out;
+    transition: .8s all ease-out;
+}
+
+.cm-logo {
+    float: left;
+    width: 25%;
+}
+
+.cm-logo a {
+    display: block;
+}
+
+.cm-logo img {
+    max-width: 100%;
+}
+
+.cm-social {
+    float: right;
+}
+
+.cm-social ul {
+    margin: 5px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cm-social ul li {
+    display: inline;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.cm-social ul li a {
+    color: #fff;
+}

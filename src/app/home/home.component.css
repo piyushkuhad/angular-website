@@ -1,0 +1,170 @@
+.bg-section,
+.bg-content {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-section .page-center,
+.bg-content .page-center {
+    min-height: 100vh;
+}
+
+.bg-section h1 {
+    margin-top: 0;
+    font-size: 120px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    line-height: 100px;
+    margin-bottom: 0;
+    width: 100%;
+    padding-top: 200px;
+}
+
+.bg-section h1 span {
+    font-weight: 300;
+    display: block;
+}
+
+.bg-section h2 {
+    margin-top: 0;
+    color: rgba(255,255,255,.9);
+    font-weight: 300;
+    font-family: Inconsolata,monospace;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.bg-section h2:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #96c7f5;
+}
+
+.bg-content h1 {
+    margin-top: 0;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+    line-height: 100px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.bg-content h1 span {
+    font-weight: 900;
+}
+
+.bg-content.overlay {
+    position: relative;
+    z-index: 9;
+}
+
+.bg-content.overlay:after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.15);
+}
+
+.bg-content.overlay .page-center {
+    position: relative;
+    z-index: 10;
+}
+
+.bg-content p {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.bg-content.banner3 {
+    background-position: center;
+}
+
+.banner2 .skew p {
+    color: #fff;
+    background-color: rgba(0,0,0,0.9);
+    width: 60%;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 auto 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.banner2 .skew p:after {
+    content:'';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(50%);
+}
+
+.banner2 .skew p span {
+    background: #333;
+    display: inline-block;
+    width: auto;
+    padding: 20px;
+    position: relative;
+    z-index: 11;
+}
+
+.banner2 .skew p:nth-child(even) {
+    text-align: right;
+}
+
+.banner2 .skew p:nth-child(even):after {
+    right: unset;
+    left: 0;
+}
+
+.bg-content p:last-of-type,
+.bg-content .skew p:last-of-type {
+    margin-bottom: 0;
+}
+
+.bg-content.banner3 p {
+    line-height: 2;
+    text-align: center;
+    color: #000;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 10px 50px;;
+    position: relative;
+    z-index: 15;
+    font-size: 20px;
+}
+
+.bg-content.banner3 span {
+    position: relative;
+    z-index: 15;
+}
+
+.bg-content.banner3 p:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewX(-15deg);
+    background-color: rgba(255,255,255,.9);
+    z-index: 10;
+}
